@@ -2,7 +2,7 @@
 ### Skådespelare | Actor
 
 <!-- Ditt headshot visas här om filen heter headshot.jpg -->
-![Oskar Brandell Headshot](headshot.jpg)
+![Oskar Brandell Headshot](Brandell.Headshot.jpeg)
 
 ---
 
