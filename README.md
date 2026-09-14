@@ -6,7 +6,7 @@
 
 ---
 
-## 📽️ Video (Showreel & Presentation)
+## Video (Showreel & Presentation)
 *Klicka på länkarna nedan för att öppna videomaterialet:*
 
 [**SE MIN PRESENTATIONSVIDEO HÄR**](https://youtu.be/Qfyiqyy3zrA)
