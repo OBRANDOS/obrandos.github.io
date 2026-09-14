@@ -116,7 +116,7 @@
             padding-bottom: 56.25%; /* 16:9 format */
             height: 0;
             overflow: hidden;
-            border-radius: 16px;
+            border-radius: 14px;
             background: #000;
             margin-bottom: 30px;
             border: 1px solid var(--border-color);
@@ -165,9 +165,8 @@
         .more-content {
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.4s cubic-bezier(0.25, 1, 0.5, 1), margin-top 0.4s ease;
+            transition: max-height 0.4s cubic-bezier(0.25, 1, 0.5, 1), margin-top 0.4s ease, opacity 0.3s ease;
             opacity: 0;
-            transition: max-height 0.4s ease, opacity 0.3s ease, margin-top 0.4s ease;
         }
         .expandable-card.active .more-content {
             margin-top: 12px;
@@ -191,7 +190,7 @@
             margin-top: 0;
         }
         .cv-image-container.open {
-            max-height: 1500px; /* Tillräckligt för att rymma hela bilden */
+            max-height: 1500px;
             opacity: 1;
             margin-top: 25px;
             border-radius: 16px;
@@ -286,3 +285,5 @@
         </table>
         
         <div class="cv-wrapper">
+            <button class="btn-download" onclick="toggleCV()">Visa fullständigt CV / View full CV</button>
+            <div id="cvContainer" class="cv-image-container">
