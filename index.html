@@ -5,13 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oskar Brandell | Skådespelare</title>
     <style>
-        /* Apple-inspirerad minimalistisk mörk design */
+        /* Apple Premium iOS Liquid Glass Design */
         :root {
             --bg-color: #000000;
             --text-color: #f5f5f7;
             --text-secondary: #86868b;
             --accent-color: #2997ff;
-            --card-bg: #111112;
+            /* iOS Liquid Glass - Semitransparent bas med ljusbrytning */
+            --glass-bg: rgba(20, 20, 25, 0.6);
+            --glass-border: rgba(255, 255, 255, 0.08);
+            --glass-hover-border: rgba(255, 255, 255, 0.2);
         }
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -21,69 +24,124 @@
             padding: 0;
             line-height: 1.6;
             -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
         }
+
+        /* Ambient Liquid Glow - Skapar djup under glaskorten */
+        body::before {
+            content: "";
+            position: absolute;
+            top: -10%; left: 10%;
+            width: 80vw; height: 600px;
+            background: radial-gradient(circle, rgba(41, 151, 255, 0.06) 0%, rgba(0,0,0,0) 70%);
+            z-index: -2;
+            pointer-events: none;
+        }
+        body::after {
+            content: "";
+            position: absolute;
+            top: 40%; right: -10%;
+            width: 60vw; height: 500px;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.03) 0%, rgba(0,0,0,0) 60%);
+            z-index: -2;
+            pointer-events: none;
+        }
+
         .container {
-            max-width: 980px;
+            max-width: 840px;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 40px 24px;
         }
         /* Header / Profil */
         header {
             text-align: center;
-            padding: 60px 0 40px 0;
+            padding: 60px 0 20px 0;
         }
         h1 {
-            font-size: 48px;
+            font-size: 56px;
             font-weight: 700;
-            letter-spacing: -0.5px;
+            letter-spacing: -1.5px;
             margin: 0 0 10px 0;
+            background: linear-gradient(135deg, #ffffff 40%, #a1a1a6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
         .subtitle {
-            font-size: 21px;
+            font-size: 22px;
             color: var(--text-secondary);
             font-weight: 400;
-            margin-bottom: 30px;
+            letter-spacing: -0.3px;
+            margin-bottom: 40px;
+        }
+        .headshot-wrapper {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 40px;
+        }
+        .headshot-wrapper::after {
+            content: "";
+            position: absolute;
+            top: 20px; left: 20px; right: 20px; bottom: 20px;
+            background: rgba(41, 151, 255, 0.1);
+            filter: blur(40px);
+            z-index: -1;
+            border-radius: 24px;
         }
         .headshot {
             width: 100%;
-            max-width: 450px;
+            max-width: 420px;
             height: auto;
-            border-radius: 18px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
-            margin-bottom: 40px;
+            border-radius: 24px;
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.7);
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s;
+        }
+        .headshot:hover {
+            transform: scale(1.02) translateY(-2px);
+            border-color: rgba(255, 255, 255, 0.25);
         }
         /* Sektioner */
         section {
             margin-bottom: 60px;
         }
         h2 {
-            font-size: 28px;
+            font-size: 24px;
             font-weight: 600;
-            border-bottom: 1px solid #222;
-            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 12px;
             margin-bottom: 25px;
+            letter-spacing: -0.3px;
         }
         /* Snabba fakta Grid */
         .stats-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 16px;
         }
+        
+        /* Liquid Glass Card Styling */
         .stat-card {
-            background: var(--card-bg);
-            padding: 20px;
-            border-radius: 12px;
-            border: 1px solid #222;
+            background: var(--glass-bg);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            padding: 24px;
+            border-radius: 20px;
+            border: 1px solid var(--glass-border);
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transition: background 0.3s, border-color 0.3s;
         }
+        
         .stat-label {
-            font-size: 12px;
+            font-size: 11px;
             text-transform: uppercase;
             color: var(--text-secondary);
-            letter-spacing: 1px;
-            margin-bottom: 5px;
+            letter-spacing: 1.2px;
+            margin-bottom: 6px;
+            font-weight: 600;
         }
         .stat-value {
-            font-size: 17px;
+            font-size: 16px;
             font-weight: 500;
         }
         .about-grid {
@@ -93,11 +151,12 @@
         }
         @media (max-width: 768px) {
             .about-grid { grid-template-columns: 1fr; }
-            h1 { font-size: 36px; }
+            h1 { font-size: 42px; }
+            .period { width: 25%; }
         }
         .stat-card ul {
             margin: 0;
-            padding-left: 20px;
+            padding-left: 18px;
             color: #f5f5f7;
         }
         .stat-card li {
@@ -106,55 +165,117 @@
         .stat-card li:last-child {
             margin-bottom: 0;
         }
-        /* Video bänk (Inga länkar - Spela direkt) */
+        /* Video bänk */
         .video-container {
             position: relative;
             padding-bottom: 56.25%; /* 16:9 format */
             height: 0;
             overflow: hidden;
-            border-radius: 14px;
+            border-radius: 20px;
             background: #000;
-            margin-bottom: 30px;
-            border: 1px solid #222;
+            margin-top: 10px;
+            margin-bottom: 50px;
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.6);
         }
         .video-container iframe {
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 0;
+            top: 0; left: 0; width: 100%; height: 100%; border: 0;
         }
         /* Tabell för CV */
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
         th, td {
             text-align: left;
-            padding: 14px;
-            border-bottom: 1px solid #1c1c1e;
+            padding: 16px;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            font-size: 16px;
         }
         tr:hover {
-            background-color: #0a0a0a;
+            background-color: rgba(255,255,255,0.02);
         }
         .period {
             color: var(--text-secondary);
             width: 15%;
         }
+        
+        /* Interaktiva expansioner för listor */
+        .expandable-card {
+            cursor: pointer;
+            transition: background-color 0.3s, border-color 0.3s, transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .expandable-card:hover {
+            background: rgba(30, 30, 35, 0.7);
+            border-color: var(--glass-hover-border);
+            transform: translateY(-2px);
+        }
+        .expand-icon {
+            position: absolute;
+            top: 24px;
+            right: 24px;
+            font-size: 18px;
+            color: var(--text-secondary);
+            transition: transform 0.3s ease;
+            font-weight: 300;
+        }
+        .more-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s cubic-bezier(0.25, 1, 0.5, 1), margin-top 0.4s ease, opacity 0.3s ease;
+            opacity: 0;
+        }
+        .expandable-card.active .more-content {
+            margin-top: 12px;
+            opacity: 1;
+        }
+        .expandable-card.active .expand-icon {
+            transform: rotate(45deg);
+            color: #ffffff;
+        }
+
+        /* CV Bild-expansion-system */
+        .cv-wrapper {
+            text-align: left;
+            margin-top: 15px;
+        }
+        .cv-image-container {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.4s ease;
+            opacity: 0;
+            margin-top: 0;
+        }
+        .cv-image-container.open {
+            max-height: 2000px;
+            opacity: 1;
+            margin-top: 25px;
+            border-radius: 20px;
+            border: 1px solid var(--glass-border);
+            overflow: hidden;
+        }
+        .cv-image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
         .btn-download {
             display: inline-block;
-            background: var(--text-color);
-            color: var(--bg-color);
-            padding: 12px 24px;
+            background: #ffffff;
+            color: #000000;
+            padding: 14px 28px;
             border-radius: 30px;
             text-decoration: none;
             font-weight: 500;
-            margin-top: 10px;
-            transition: opacity 0.2s;
+            font-size: 15px;
+            transition: opacity 0.2s, transform 0.2s;
+            cursor: pointer;
+            border: none;
+            box-shadow: 0 4px 12px rgba(255,255,255,0.1);
         }
-        .btn-download:hover { opacity: 0.9; }
+        .btn-download:hover { opacity: 0.9; transform: scale(1.01); }
         a { color: var(--accent-color); text-decoration: none; }
         a:hover { text-decoration: underline; }
     </style>
@@ -166,7 +287,14 @@
     <header>
         <h1>OSKAR BRANDELL</h1>
         <div class="subtitle">Skådespelare | Actor</div>
-        <img src="IMG_6022.jpeg" alt="Oskar Brandell" class="headshot">
+        <div class="headshot-wrapper">
+            <img src="IMG_6022.jpeg" alt="Oskar Brandell" class="headshot">
+        </div>
+        
+        <!-- VIDEOSPELARE PLACERAD DIRECT UNDER HEADSHOT -->
+        <div class="video-container">
+            <iframe src="https://youtube.com" allowfullscreen></iframe>
+        </div>
     </header>
 
     <!-- OM MIG Sektion -->
@@ -174,92 +302,7 @@
         <h2>Om mig / About me</h2>
         <div class="about-grid">
             <div class="stat-card">
-                <p style="font-weight: 600; margin-top: 0;">Svenska</p>
+                <p style="font-weight: 600; margin-top: 0; color: #fff;">Svenska</p>
                 <ul>
                     <li>Utbildad vid Calle Flygare Teaterskola med bakgrund som industridesigner och maskiningenjör.</li>
                     <li>Medverkat i produktioner som KOPPS, Innan Jag Växer Upp och The Scar That Scares Me.</li>
-                    <li>Även verksam som filmregissör, filmproducent, fotograf och författare.</li>
-                    <li>Läs mitt fullständiga CV här nedan eller läs min profil direkt på Internet Movie Database.</li>
-                </ul>
-            </div>
-            <div class="stat-card">
-                <p style="font-weight: 600; margin-top: 0;">English</p>
-                <ul>
-                    <li>Trained at Calle Flygare Teaterskola with a background in industrial design and mechanical engineering.</li>
-                    <li>Appeared in productions including KOPPS, Innan Jag Växer Upp and The Scar That Scares Me.</li>
-                    <li>Also active as a film director, film producer, photographer and writer.</li>
-                    <li>Review my credits below or visit my profile directly on the Internet Movie Database.</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- VIDEO SEKTION -->
-    <section>
-        <h2>Presentationsvideo</h2>
-        <div class="video-container">
-            <iframe src="https://youtube.com" allowfullscreen></iframe>
-        </div>
-    </section>
-
-    <!-- VITAL STATS -->
-    <section>
-        <h2>Snabba fakta</h2>
-        <div class="stats-grid">
-            <div class="stat-card"><div class="stat-label">Spelålder</div><div class="stat-value">20 – 30 år</div></div>
-            <div class="stat-card"><div class="stat-label">Längd / Vikt</div><div class="stat-value">180 cm / 75 kg</div></div>
-            <div class="stat-card"><div class="stat-label">Ögon / Hår</div><div class="stat-value">Mörkblå / Ljusbrun</div></div>
-            <div class="stat-card"><div class="stat-label">Språk</div><div class="stat-value">Svenska, Engelska (Am), Spanska</div></div>
-        </div>
-    </section>
-
-    <!-- PROFIL / ERFARENHET -->
-    <section>
-        <h2>Erfarenhet i urval</h2>
-        <table>
-            <tr><td class="period">2026</td><td><strong>KOPPS</strong> – Norrtäljesommarscen</td></tr>
-            <tr><td class="period">2025</td><td><strong>The Scar That Scares Me</strong> – Nelson (Regi: Michael Asonganyi)</td></tr>
-            <tr><td class="period">2020</td><td><strong>Innan Jag Växer Upp</strong> – Talroll (Regi: Martin Ekelund)</td></tr>
-            <tr><td class="period">2020</td><td><strong>Skattkammarön</strong> – Mr Arrow (Pegasus)</td></tr>
-        </table>
-        <a href="Brandell.Oskar-CV.png" class="btn-download" target="_blank">Visa fullständigt CV</a>
-    </section>
-
-    <!-- UTBILDNING -->
-    <section>
-        <h2>Utbildning</h2>
-        <table>
-            <tr><td class="period">2024–2026</td><td><strong>Calle Flygare Teaterskola</strong></td></tr>
-            <tr><td class="period">2025</td><td><strong>Cinemantrix</strong> – Grundkurs i skådespeleri</td></tr>
-            <tr><td class="period">2020</td><td><strong>Natalie Portman Masterclass</strong> – Videokurs i skådespeleri</td></tr>
-            <tr><td class="period">2020</td><td><strong>Kulturama</strong> – Skådespel för film & tv</td></tr>
-        </table>
-    </section>
-
-    <!-- FÄRDIGHETER -->
-    <section>
-        <h2>Särskilda färdigheter</h2>
-        <div class="stats-grid">
-            <div class="stat-card"><div class="stat-label">Fysiskt & Stunt</div><div class="stat-value">Kampsport, Parkour, Stunt, Improvisation, Kameravana</div></div>
-            <div class="stat-card"><div class="stat-label">Musik & Studio</div><div class="stat-value">Sång, Elgitarr, Gitarr, Elbas</div></div>
-            <div class="stat-card"><div class="stat-label">Produktion</div><div class="stat-value">Filmregissör, Filmproducent, Fotograf, Författare</div></div>
-        </div>
-    </section>
-
-    <!-- KONTAKT -->
-    <section>
-        <h2>Kontakt</h2>
-        <div class="stats-grid" style="grid-template-columns: 1fr;">
-            <div class="stat-card" style="text-align: center;">
-                <div class="stat-label">Direktkontakt</div>
-                <p style="margin: 10px 0; font-size: 18px;"><strong>E-post:</strong> oskarbrandell@hotmail.se</p>
-                <p style="margin: 10px 0; font-size: 18px;"><strong>Telefon:</strong> (+46) 76 006 73 13</p>
-                <p style="margin: 20px 0 0 0; font-size: 16px;"><a href="https://www.imdb.com/name/nm11712438/" target="_blank">Läs mitt CV på Internet Movie Database &rarr;</a></p>
-            </div>
-        </div>
-    </section>
-
-</div>
-
-</body>
-</html>
