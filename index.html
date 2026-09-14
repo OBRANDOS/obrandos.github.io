@@ -5,98 +5,139 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oskar Brandell | Skådespelare</title>
     <style>
-        /* Apple-inspirerad minimalistisk mörk design */
+        /* Apple Premium Minimalist Dark Theme */
         :root {
             --bg-color: #000000;
             --text-color: #f5f5f7;
             --text-secondary: #86868b;
             --accent-color: #2997ff;
-            --card-bg: #111112;
+            --card-bg: #1c1c1e;
+            --card-hover: #2c2c2e;
+            --border-color: #2c2c2e;
         }
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             background-color: var(--bg-color);
             color: var(--text-color);
             margin: 0;
             padding: 0;
-            line-height: 1.5;
+            line-height: 1.6;
             -webkit-font-smoothing: antialiased;
+            /* Mjuk infasning av hela sidan */
+            animation: fadeInPage 1.2s ease-out;
         }
+
+        @keyframes fadeInPage {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
         .container {
-            max-width: 980px;
+            max-width: 840px;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 60px 24px;
         }
-        /* Header / Profil */
+
+        /* Header Layout */
         header {
             text-align: center;
-            padding: 60px 0 40px 0;
+            padding: 40px 0 60px 0;
         }
+
         h1 {
-            font-size: 48px;
+            font-size: 56px;
             font-weight: 700;
-            letter-spacing: -0.5px;
-            margin: 0 0 10px 0;
+            letter-spacing: -1.5px;
+            margin: 0 0 8px 0;
+            background: linear-gradient(180deg, #ffffff 60%, #a1a1a6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
+
         .subtitle {
-            font-size: 21px;
+            font-size: 24px;
             color: var(--text-secondary);
             font-weight: 400;
-            margin-bottom: 30px;
-        }
-        .headshot {
-            width: 100%;
-            max-width: 450px;
-            height: auto;
-            border-radius: 18px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+            letter-spacing: -0.3px;
             margin-bottom: 40px;
         }
+
+        .headshot {
+            width: 100%;
+            max-width: 420px;
+            height: auto;
+            border-radius: 24px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.8);
+            transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        .headshot:hover {
+            transform: scale(1.02);
+        }
+
         /* Sektioner */
         section {
-            margin-bottom: 60px;
+            margin-bottom: 70px;
         }
+
         h2 {
-            font-size: 28px;
+            font-size: 26px;
             font-weight: 600;
-            border-bottom: 1px solid #222;
-            padding-bottom: 10px;
-            margin-bottom: 25px;
+            letter-spacing: -0.5px;
+            margin-bottom: 24px;
+            color: #ffffff;
         }
-        /* Snabba fakta Grid */
-        .stats-grid {
+
+        /* Apple Bento Grid (Fakta & Färdigheter) */
+        .grid-layout {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 16px;
         }
-        .stat-card {
+
+        .card {
             background: var(--card-bg);
-            padding: 20px;
-            border-radius: 12px;
-            border: 1px solid #222;
+            padding: 24px;
+            border-radius: 18px;
+            border: 1px solid var(--border-color);
+            transition: background 0.3s, border-color 0.3s, transform 0.3s;
         }
-        .stat-label {
-            font-size: 12px;
+
+        .card:hover {
+            background: var(--card-hover);
+            border-color: #424245;
+            transform: translateY(-2px);
+        }
+
+        .card-label {
+            font-size: 11px;
+            font-weight: 600;
             text-transform: uppercase;
             color: var(--text-secondary);
-            letter-spacing: 1px;
-            margin-bottom: 5px;
+            letter-spacing: 1.2px;
+            margin-bottom: 6px;
         }
-        .stat-value {
-            font-size: 17px;
+
+        .card-value {
+            font-size: 16px;
             font-weight: 500;
+            color: #f5f5f7;
         }
-        /* Video bänk (Inga länkar - Spela direkt) */
+
+        /* Cinematic Video Player med mjuk skugga */
         .video-container {
             position: relative;
-            padding-bottom: 56.25%; /* 16:9 format */
+            padding-bottom: 56.25%;
             height: 0;
             overflow: hidden;
-            border-radius: 14px;
+            border-radius: 20px;
             background: #000;
             margin-bottom: 30px;
-            border: 1px solid #222;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.6);
         }
+
         .video-container iframe {
             position: absolute;
             top: 0;
@@ -105,48 +146,60 @@
             height: 100%;
             border: 0;
         }
-        /* Tabell för CV */
-        table {
+
+        /* Minimalistiskt CV-system */
+        .cv-table {
             width: 100%;
             border-collapse: collapse;
-            margin-bottom: 20px;
+            margin-bottom: 24px;
         }
-        th, td {
-            text-align: left;
-            padding: 14px;
+
+        .cv-table td {
+            padding: 16px 0;
             border-bottom: 1px solid #1c1c1e;
+            font-size: 16px;
         }
-        tr:hover {
-            background-color: #0a0a0a;
-        }
+
         .period {
             color: var(--text-secondary);
             width: 15%;
+            font-weight: 400;
         }
-        /* Kontakt / Agent */
+
+        /* Apple-knapp */
+        .btn-premium {
+            display: inline-block;
+            background: #ffffff;
+            color: #000000;
+            padding: 12px 28px;
+            border-radius: 24px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 15px;
+            transition: opacity 0.2s, transform 0.2s;
+        }
+
+        .btn-premium:hover {
+            opacity: 0.9;
+            transform: scale(1.01);
+        }
+
+        /* Kontakt sektion */
         .contact-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 30px;
+            gap: 20px;
         }
+
         @media (max-width: 768px) {
             .contact-grid { grid-template-columns: 1fr; }
-            h1 { font-size: 36px; }
+            h1 { font-size: 42px; }
+            .period { width: 25%; }
         }
-        .btn-download {
-            display: inline-block;
-            background: var(--text-color);
-            color: var(--bg-color);
-            padding: 12px 24px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 500;
-            margin-top: 10px;
-            transition: opacity 0.2s;
-        }
-        .btn-download:hover { opacity: 0.9; }
-        a { color: var(--accent-color); text-decoration: none; }
-        a:hover { text-decoration: underline; }
+
+        p { margin: 6px 0; font-size: 15px; }
+        a { color: var(--accent-color); text-decoration: none; transition: color 0.2s; }
+        a:hover { color: #51a7ff; text-decoration: none; }
     </style>
 </head>
 <body>
@@ -167,33 +220,33 @@
         </div>
     </section>
 
-    <!-- VITAL STATS -->
+    <!-- BENTO GRID: SNABBA FAKTA -->
     <section>
         <h2>Snabba fakta</h2>
-        <div class="stats-grid">
-            <div class="stat-card"><div class="stat-label">Spelålder</div><div class="stat-value">20 – 30 år</div></div>
-            <div class="stat-card"><div class="stat-label">Längd / Vikt</div><div class="stat-value">180 cm / 75 kg</div></div>
-            <div class="stat-card"><div class="stat-label">Ögon / Hår</div><div class="stat-value">Mörkblå / Ljusbrun</div></div>
-            <div class="stat-card"><div class="stat-label">Språk</div><div class="stat-value">Svenska, Engelska (Am)</div></div>
+        <div class="grid-layout">
+            <div class="card"><div class="card-label">Spelålder</div><div class="card-value">20 – 30 år</div></div>
+            <div class="card"><div class="card-label">Längd / Vikt</div><div class="card-value">180 cm / 75 kg</div></div>
+            <div class="card"><div class="card-label">Ögon / Hår</div><div class="card-value">Mörkblå / Ljusbrun</div></div>
+            <div class="card"><div class="card-label">Språk</div><div class="card-value">Svenska, Engelska (Am), Spanska</div></div>
         </div>
     </section>
 
-    <!-- PROFIL / ERFARENHET -->
+    <!-- CV / ERFARENHET -->
     <section>
         <h2>Erfarenhet i urval</h2>
-        <table>
+        <table class="cv-table">
             <tr><td class="period">2026</td><td><strong>KOPPS</strong> – Norrtäljesommarscen</td></tr>
             <tr><td class="period">2025</td><td><strong>The Scar That Scares Me</strong> – Nelson (Regi: Michael Asonganyi)</td></tr>
             <tr><td class="period">2020</td><td><strong>Innan Jag Växer Upp</strong> – Talroll (Regi: Martin Ekelund)</td></tr>
             <tr><td class="period">2020</td><td><strong>Skattkammarön</strong> – Mr Arrow (Pegasus)</td></tr>
         </table>
-        <a href="Brandell.Oskar-CV.png" class="btn-download" target="_blank">Visa fullständigt CV</a>
+        <a href="Brandell.Oskar-CV.png" class="btn-premium" target="_blank">Visa fullständigt CV</a>
     </section>
 
     <!-- UTBILDNING -->
     <section>
         <h2>Utbildning</h2>
-        <table>
+        <table class="cv-table">
             <tr><td class="period">2024–2026</td><td><strong>Calle Flygare Teaterskola</strong></td></tr>
             <tr><td class="period">2025</td><td><strong>Cinemantrix</strong> – Grundkurs i skådespeleri</td></tr>
             <tr><td class="period">2020</td><td><strong>Natalie Portman Masterclass</strong> – Videokurs i skådespeleri</td></tr>
@@ -201,21 +254,31 @@
         </table>
     </section>
 
+    <!-- BENTO GRID: FÄRDIGHETER -->
+    <section>
+        <h2>Särskilda färdigheter</h2>
+        <div class="grid-layout">
+            <div class="card"><div class="card-label">Fysiskt & Stunt</div><div class="card-value">Kampsport, Parkour, Stunt, Improvisation, Kameravana</div></div>
+            <div class="card"><div class="card-label">Musik & Studio</div><div class="card-value">Sång, Elgitarr, Gitarr, Elbas</div></div>
+            <div class="card"><div class="card-label">Produktion</div><div class="card-value">Filmregissör, Filmproducent, Fotograf, Författare</div></div>
+        </div>
+    </section>
+
     <!-- KONTAKT & AGENT -->
     <section>
         <h2>Kontakt & Representation</h2>
         <div class="contact-grid">
-            <div class="stat-card">
-                <div class="stat-label">Direktkontakt</div>
-                <p style="margin: 5px 0;"><strong>E-post:</strong> oskarbrandell@hotmail.se</p>
-                <p style="margin: 5px 0;"><strong>Telefon:</strong> (+46) 76 006 73 13</p>
-                <p style="margin: 15px 0 0 0;"><a href="https://imdb.com" target="_blank">Besök min IMDb-profil &rarr;</a></p>
+            <div class="card">
+                <div class="card-label">Direktkontakt</div>
+                <p><strong>E-post:</strong> oskarbrandell@hotmail.se</p>
+                <p><strong>Telefon:</strong> (+46) 76 006 73 13</p>
+                <p style="margin-top: 16px;"><a href="https://imdb.com" target="_blank">Besök min IMDb-profil &rarr;</a></p>
             </div>
-            <div class="stat-card">
-                <div class="stat-label">Agentur (JK Agency)</div>
-                <p style="margin: 5px 0;"><strong>Agent:</strong> Jennie Kilgren</p>
-                <p style="margin: 5px 0;"><strong>E-post:</strong> jennie@jkagency.se</p>
-                <p style="margin: 5px 0;"><strong>Telefon:</strong> +4670 990 78 22</p>
+            <div class="card">
+                <div class="card-label">Agentur (JK Agency)</div>
+                <p><strong>Agent:</strong> Jennie Kilgren</p>
+                <p><strong>E-post:</strong> jennie@jkagency.se</p>
+                <p><strong>Telefon:</strong> +4670 990 78 22</p>
             </div>
         </div>
     </section>
