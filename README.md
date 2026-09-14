@@ -9,7 +9,7 @@
 ## 📽️ Video (Showreel & Presentation)
 *Klicka på länkarna nedan för att öppna videomaterialet:*
 
-👉 [**SE MIN PRESENTATIONSVIDEO HÄR**](KLISTRA_IN_LÄNK_TILL_DIN_PRESENTATIONSVIDEO_HÄR)
+👉 [**SE MIN PRESENTATIONSVIDEO HÄR**](https://youtu.be/Qfyiqyy3zrA))
 👉 [**SE MIN MONOLOG HÄR**](KLISTRA_IN_LÄNK_TILL_DIN_MONOLOG_HÄR)
 
 ---
