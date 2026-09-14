@@ -1,54 +1,68 @@
-# [DITT FÖRNAMN & EFTERNAMN]
+# OSKAR BRANDELL
 ### Skådespelare | Actor
+
+<!-- Ditt headshot visas här om filen heter headshot.jpg -->
+![Oskar Brandell Headshot](headshot.jpg)
+
+---
+
+## 📽️ Video (Showreel & Presentation)
+*Klicka på länkarna nedan för att öppna videomaterialet:*
+
+👉 [**SE MIN PRESENTATIONSVIDEO HÄR**](KLISTRA_IN_LÄNK_TILL_DIN_PRESENTATIONSVIDEO_HÄR)
+👉 [**SE MIN MONOLOG HÄR**](KLISTRA_IN_LÄNK_TILL_DIN_MONOLOG_HÄR)
 
 ---
 
 ## 🎭 Snabba fakta (Vital Stats)
-* **Spelålder:** [T.ex. 25–35 år]
-* **Längd:** [T.ex. 178 cm]
-* **Ögonfärg:** [T.ex. Blå]
-* **Hårfärg:** [T.ex. Mörkbrun]
-* **Språk:** [T.ex. Svenska (Modersmål), Engelska (Flytande/Amerikansk dialekt)]
-* **Boende:** [T.ex. Stockholm / Malmö (Har lokalt boende på båda orterna)]
-* **Körkort:** [T.ex. B-körkort]
+* **Spelålder:** 20 – 30 år
+* **Längd:** 182 cm
+* **Vikt:** 75 kg
+* **Utseende:** Skandinaviskt
+* **Ögonfärg:** Mörkblå
+* **Hårfärg & Längd:** Ljusbrun / Långt hår
+* **Boende:** Stockholm
+* **Språk:** Svenska (modersmål), Engelska (Amerikansk), Spanska, Skånska (dialekt), Uppländska (dialekt)
 
 ---
 
-## 📽️ Showreel & Scener
-*Klicka på länken nedan för att se mitt senaste videomaterial:*
+## 💼 Branscherfarenhet & Aktuellt
 
-👉 **[KLICKA HÄR FÖR ATT SE MIN SHOWREEL](HÄR_KLISTRAR_DU_IN_LÄNK_TILL_VIMEO_ELLER_YOUTUBE)**
+📄 [**LADDA NER MITT KOMPLETTA CV (PDF)**](CV.pdf)
 
----
+### Aktuellt
+* **2026** | **KOPPS** | Nortäljesommarscen
+* **2024–2026** | **Calle Flygare Teaterskola**
+* **2025** | **Cinemantrix** | Grundkurs i skådespeleri workshop
 
-## 💼 Erfarenhet i urval (Acting Credits)
-
-### Film & TV
-* **[År]** | **[Film/Serie-titel]** | Roll: [T.ex. Biroll: Polisen] | Regi: [Namn] | [T.ex. SVT / Netflix]
-* **[År]** | **[Film/Serie-titel]** | Roll: [T.ex. Huvudroll: Johan] | Regi: [Namn] | [T.ex. SF Studios]
-
-### Teater / Scen
-* **[År]** | **[Pjäsens namn]** | Roll: [T.ex. Romeo] | Regi: [Namn] | [T.ex. Dramaten]
+### Film, TV & Produktioner i urval
+* **2020** | **Innan Jag Växer Upp** | Roll: Talroll utan namn | Arbetsgivare: Martin Ekelund
+* **2020** | **The Scar That Scares Me** | Roll: Nelson | Arbetsgivare: Michael Asonganyi
+* **2020** | **Skattkammarön** | Roll: Mr Arrow | Arbetsgivare: Pegasus
 
 ---
 
-## 🎓 Utbildning (Education)
-* **[År–År]** | [T.ex. Teaterhögskolan i Malmö] – Skådespelarprogrammet (3 år)
-* **[År]** | [T.ex. Masterclass i Screen Acting] – [Namn på lärare/skola]
+## 🎓 Utbildning & Träning (Education)
+* **2020** | **Masterclass** – Masterclass videokurs med Natalie Portman
+* **2020** | **MAF** – Kurs/Workshop: Improvisation
+* **2020** | **Kulturama** – Kurs/Workshop: Skådespel för film och tv
+* **2020** | **Pegasus** – Kurs/Workshop: Skådespel
+* **2020** | **Pegasus** – Kurs/Workshop: Improvisation
+* **2020** | **Malmö latin skolan** – Gymnasial: Bild och formgivning
+* **2017** | **Högskolan i Gävle** – Universitet: Industri design
 
 ---
 
-## ✨ Särskilda färdigheter (Skills)
-* **Fysiskt:** [T.ex. Sceniskt akrobatik, Kampsport (Krav Maga), Dans (Jazz)]
-* **Musik:** [T.ex. Sång (Baryton), Spelar gitarr och piano]
-* **Övrigt:** [T.ex. Erfarenhet av vapenhantering för film, Dialekter (Skånska, Göteborgska)]
+## ✨ Fler färdigheter (Skills)
+* **Yrken & Studio:** Filmproducent, Filmregissör, Fotograf, Författare, Handkamera operatör, Studiovana
+* **Fysiskt & Stunt:** Improvisation, Kameravana, Kampsport, Parkour, Scenvana, Skridskor, Skådespeleri, Stunt
+* **Musik & Instrument:** Sång, Elbas, Elgitarr, Gitarr
 
 ---
 
 ## 📞 Kontakt & Portaler
-* **Direkt e-post:** [din.epost@email.com]
-* **Telefon:** [ditt telefonnummer]
-* **Agentur:** [Om du har agent, skriv namnet och länk här, annars ta bort denna rad]
+* **E-post:** oskarbrandell@hotmail.se
+* **Telefon:** (+46) 76 006 73 13
+* **Adress:** Rindögatan 26, Stockholm 115 58
 
-**Hitta mig på castingsidor:**
-* [Länk till din profil på Spotlight, IMDb, Teateralliansen eller StagePool]
+🌐 [**BESÖK MIN IMDB-PROFIL HÄR**](https://imdb.com)
