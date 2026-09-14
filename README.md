@@ -28,7 +28,7 @@
 
 ## 💼 Branscherfarenhet & Aktuellt
 
-📄 [**LADDA NER MITT KOMPLETTA CV (PDF)**](CV.pdf)
+📄 [**LADDA NER MITT KOMPLETTA CV (PDF)**](Brandell.Oskar-CV.png)
 
 ### Aktuellt
 * **2026** | **KOPPS** | Nortäljesommarscen
