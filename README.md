@@ -9,12 +9,12 @@
 ## 📽️ Video (Showreel & Presentation)
 *Klicka på länkarna nedan för att öppna videomaterialet:*
 
-👉 [**SE MIN PRESENTATIONSVIDEO HÄR**](https://youtu.be/Qfyiqyy3zrA))
-👉 [**SE MIN MONOLOG HÄR**](KLISTRA_IN_LÄNK_TILL_DIN_MONOLOG_HÄR)
+[**SE MIN PRESENTATIONSVIDEO HÄR**](https://youtu.be/Qfyiqyy3zrA)
+[**SE MIN MONOLOG HÄR**](KLISTRA_IN_LÄNK_TILL_DIN_MONOLOG_HÄR)
 
 ---
 
-## 🎭 Snabba fakta (Vital Stats)
+##  Snabba fakta (Vital Stats)
 * **Spelålder:** 20 – 30 år
 * **Längd:** 182 cm
 * **Vikt:** 75 kg
@@ -26,7 +26,7 @@
 
 ---
 
-## 💼 Branscherfarenhet & Aktuellt
+## Branscherfarenhet & Aktuellt
 
 📄 [**LADDA NER MITT KOMPLETTA CV (PDF)**](Brandell.Oskar-CV.png)
 
@@ -42,7 +42,7 @@
 
 ---
 
-## 🎓 Utbildning & Träning (Education)
+##  Utbildning & Träning (Education)
 * **2020** | **Masterclass** – Masterclass videokurs med Natalie Portman
 * **2020** | **MAF** – Kurs/Workshop: Improvisation
 * **2020** | **Kulturama** – Kurs/Workshop: Skådespel för film och tv
@@ -53,16 +53,16 @@
 
 ---
 
-## ✨ Fler färdigheter (Skills)
+##  Fler färdigheter (Skills)
 * **Yrken & Studio:** Filmproducent, Filmregissör, Fotograf, Författare, Handkamera operatör, Studiovana
 * **Fysiskt & Stunt:** Improvisation, Kameravana, Kampsport, Parkour, Scenvana, Skridskor, Skådespeleri, Stunt
 * **Musik & Instrument:** Sång, Elbas, Elgitarr, Gitarr
 
 ---
 
-## 📞 Kontakt & Portaler
+##  Kontakt & Portaler
 * **E-post:** oskarbrandell@hotmail.se
 * **Telefon:** (+46) 76 006 73 13
 * **Adress:** Rindögatan 26, Stockholm 115 58
 
-🌐 [**BESÖK MIN IMDB-PROFIL HÄR**](https://imdb.com)
+ [**BESÖK MIN IMDB-PROFIL HÄR**](https://imdb.com)
