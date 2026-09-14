@@ -29,13 +29,11 @@
             animation: fadeInPage 1.4s cubic-bezier(0.25, 1, 0.5, 1);
         }
 
-        /* Mjuk, cinematisk infasning */
         @keyframes fadeInPage {
             from { opacity: 0; transform: translateY(20px); filter: blur(5px); }
             to { opacity: 1; transform: translateY(0); filter: blur(0); }
         }
 
-        /* Bakgrundseffekter för att skapa djup (Apple ambient glow) */
         body::before {
             content: "";
             position: absolute;
@@ -50,15 +48,14 @@
         }
 
         .container {
-            max-width: 800px;
+            max-width: 840px;
             margin: 0 auto;
             padding: 80px 24px;
         }
 
-        /* Header / Profil */
         header {
             text-align: center;
-            padding: 40px 0 80px 0;
+            padding: 40px 0 60px 0;
         }
 
         h1 {
@@ -66,7 +63,6 @@
             font-weight: 700;
             letter-spacing: -2px;
             margin: 0 0 12px 0;
-            /* Premium gradient på texten */
             background: linear-gradient(135deg, #ffffff 30%, #a1a1a6 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -86,7 +82,6 @@
             margin-bottom: 20px;
         }
 
-        /* Mjuk skugg-glöd bakom bilden */
         .headshot-wrapper::after {
             content: "";
             position: absolute;
@@ -111,7 +106,6 @@
             border-color: rgba(255, 255, 255, 0.25);
         }
 
-        /* Sektioner */
         section {
             margin-bottom: 80px;
         }
@@ -125,14 +119,24 @@
             opacity: 0.9;
         }
 
-        /* Bento Grid Layout */
         .grid-layout {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
             gap: 16px;
         }
 
-        /* Premium frostat glas-kort */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .about-grid { grid-template-columns: 1fr; }
+            h1 { font-size: 46px; }
+            .period { width: 25%; }
+        }
+
         .card {
             background: var(--glass-bg);
             backdrop-filter: blur(20px);
@@ -150,6 +154,14 @@
             box-shadow: 0 15px 30px rgba(0,0,0,0.4);
         }
 
+        .card-title-mini {
+            font-size: 14px;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 12px;
+            letter-spacing: -0.2px;
+        }
+
         .card-label {
             font-size: 11px;
             font-weight: 600;
@@ -165,19 +177,25 @@
             color: #f5f5f7;
         }
 
-        /* Cinematic Video bänk med ljusgloria */
-        .video-wrapper {
-            position: relative;
+        .card ul {
+            margin: 0;
+            padding-left: 20px;
+            color: #e8e8ed;
+            font-size: 15px;
         }
 
-        .video-wrapper::before {
-            content: "";
-            position: absolute;
-            top: 20px; left: 20px; right: 20px; bottom: 20px;
-            background: radial-gradient(circle, rgba(41, 151, 255, 0.15) 0%, rgba(0,0,0,0) 80%);
-            filter: blur(30px);
-            z-index: -1;
-            pointer-events: none;
+        .card li {
+            margin-bottom: 10px;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 20px;
+        }
+
+        .video-wrapper {
+            position: relative;
         }
 
         .video-container {
@@ -201,7 +219,14 @@
             border: 0;
         }
 
-        /* Elegant CV listbygge */
+        .video-caption {
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-top: 10px;
+            text-align: center;
+            font-weight: 500;
+        }
+
         .cv-table {
             width: 100%;
             border-collapse: collapse;
@@ -221,7 +246,6 @@
             font-variant-numeric: tabular-nums;
         }
 
-        /* Apple High-End Knapp */
         .btn-premium {
             display: inline-block;
             background: #ffffff;
@@ -238,19 +262,6 @@
         .btn-premium:hover {
             opacity: 0.92;
             transform: scale(1.02);
-        }
-
-        /* Kontakt sektion */
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-
-        @media (max-width: 768px) {
-            .contact-grid { grid-template-columns: 1fr; }
-            h1 { font-size: 46px; }
-            .period { width: 25%; }
         }
 
         p { margin: 8px 0; font-size: 15px; }
@@ -270,42 +281,40 @@
         </div>
     </header>
 
-    <!-- VIDEO SEKTION -->
     <section>
-        <h2>Presentationsvideo</h2>
-        <div class="video-wrapper">
-            <div class="video-container">
-                <iframe src="https://youtube.com" allowfullscreen></iframe>
+        <h2>Om mig / About me</h2>
+        <div class="about-grid">
+            <div class="card">
+                <div class="card-title-mini">Svenska</div>
+                <ul>
+                    <li>Utbildad vid Calle Flygare Teaterskola med bakgrund som industridesigner och maskiningenjör.</li>
+                    <li>Medverkat i produktioner som KOPPS, Innan Jag Växer Upp och The Scar That Scares Me.</li>
+                    <li>Även verksam som filmregissör, filmproducent, fotograf och författare.</li>
+                    <li>Läs mitt fullständiga CV här nedan eller besök min officiella profil på Internet Movie Database.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <div class="card-title-mini">English</div>
+                <ul>
+                    <li>Trained at Calle Flygare Teaterskola with a background in industrial design and mechanical engineering.</li>
+                    <li>Appeared in productions including KOPPS, Innan Jag Växer Upp and The Scar That Scares Me.</li>
+                    <li>Also active as a film director, film producer, photographer and writer.</li>
+                    <li>Review my credits below or visit my profile directly on the Internet Movie Database.</li>
+                </ul>
             </div>
         </div>
     </section>
 
-    <!-- BENTO GRID: SNABBA FAKTA -->
     <section>
-        <h2>Snabba fakta</h2>
-        <div class="grid-layout">
-            <div class="card"><div class="card-label">Spelålder</div><div class="card-value">20 – 30 år</div></div>
-            <div class="card"><div class="card-label">Längd / Vikt</div><div class="card-value">180 cm / 75 kg</div></div>
-            <div class="card"><div class="card-label">Ögon / Hår</div><div class="card-value">Mörkblå / Ljusbrun</div></div>
-            <div class="card"><div class="card-label">Språk</div><div class="card-value">Svenska, Engelska (Am), Spanska</div></div>
-        </div>
-    </section>
-
-    <!-- CV / ERFARENHET -->
-    <section>
-        <h2>Erfarenhet i urval</h2>
-        <table class="cv-table">
-            <tr><td class="period">2026</td><td><strong>KOPPS</strong> – Norrtäljesommarscen</td></tr>
-            <tr><td class="period">2025</td><td><strong>The Scar That Scares Me</strong> – Nelson (Regi: Michael Asonganyi)</td></tr>
-            <tr><td class="period">2020</td><td><strong>Innan Jag Växer Upp</strong> – Talroll (Regi: Martin Ekelund)</td></tr>
-            <tr><td class="period">2020</td><td><strong>Skattkammarön</strong> – Mr Arrow (Pegasus)</td></tr>
-        </table>
-        <a href="Brandell.Oskar-CV.png" class="btn-premium" target="_blank">Visa fullständigt CV</a>
-    </section>
-
-    <!-- UTBILDNING -->
-    <section>
-        <h2>Utbildning</h2>
-        <table class="cv-table">
-            <tr><td class="period">2024–2026</td><td><strong>Calle Flygare Teaterskola</strong></td></tr>
-            <tr><td class="period">2025</td><td><strong>Cinemantrix</strong> – Grundkurs i skådespeleri</td></tr>
+        <h2>Media</h2>
+        <div class="video-grid">
+            <div class="video-wrapper">
+                <div class="video-container">
+                    <iframe src="https://youtube.com" allowfullscreen></iframe>
+                </div>
+                <div class="video-caption">Presentationsvideo</div>
+            </div>
+            <div class="video-wrapper">
+                <div class="video-container" style="background: rgba(22, 22, 23, 0.4); display: flex; align-items: center; justify-content: center; position: absolute; top:0; left:0; width:100%; height:100%;">
+                    <span style="color: var(--text-secondary); font-size: 14px; font-weight: 500;">Monolog / Showreel kommer snart</span>
+                </div>
