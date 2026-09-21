@@ -44,14 +44,60 @@
             font-weight: 400;
             margin-bottom: 30px;
         }
-        .headshot {
+        
+        /* DESIGN FÖR BILD-KARUSELLEN */
+        .slider-container {
+            position: relative;
             width: 100%;
             max-width: 450px;
-            height: auto;
+            margin: 0 auto 40px auto;
+        }
+        .slider-wrapper {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
             border-radius: 18px;
             box-shadow: 0 20px 40px rgba(0,0,0,0.5);
-            margin-bottom: 40px;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
         }
+        .slider-wrapper::-webkit-scrollbar {
+            display: none;
+        }
+        .slider-wrapper img {
+            flex: 0 0 100%;
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            scroll-snap-align: start;
+            pointer-events: none;
+        }
+        .slider-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            font-size: 18px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s;
+            backdrop-filter: blur(5px);
+            z-index: 10;
+        }
+        .slider-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+        .slider-btn.prev { left: 15px; }
+        .slider-btn.next { right: 15px; }
+
         /* Sektioner */
         section {
             margin-bottom: 60px;
@@ -106,7 +152,7 @@
         .stat-card li:last-child {
             margin-bottom: 0;
         }
-        /* Video bänk (Inga länkar - Spela direkt) */
+        /* Video bänk */
         .video-container {
             position: relative;
             padding-bottom: 56.25%; /* 16:9 format */
@@ -166,24 +212,30 @@
     <header>
         <h1>OSKAR BRANDELL</h1>
         <div class="subtitle">Skådespelare | Actor</div>
-        <img src="IMG_6022.jpeg" alt="Oskar Brandell" class="headshot">
+        
+        <!-- BILD-KARUSELL MED DINA TVÅ BILDER -->
+        <div class="slider-container">
+            <button class="slider-btn prev" onclick="moveSlide(-1)">&#10094;</button>
+            <div class="slider-wrapper" id="sliderWrapper">
+                <img src="IMG_6022.jpeg" alt="Oskar Brandell - Porträtt 1">
+                <img src="Brandell.Headshot.jpeg" alt="Oskar Brandell - Porträtt 2">
+            </div>
+            <button class="slider-btn next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
     </header>
     
-<!-- VIDEO SEKTION -->
+    <!-- VIDEO SEKTION -->
     <section>
         <h2>SHOWREEL</h2>
         <div class="video-container">
-            <iframe width="560" height="315"
-                src="https://www.youtube.com/embed/_mHhq8myjHQ?
-                si=z3CEuxz2EOTpWug2"
-                title="YouTube video player"
+            <iframe 
+                src="https://youtube.com"
+                title="Oskar Brandell - SHOWREEL 2026"
                 frameborder="0"
-                allow="accelerometer; autoplay;
-                clipboard-write;
-                encrypted-media; gyroscope;
-                picture-in-picture; web-share"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen></iframe>  
+                allowfullscreen>
+            </iframe>  
         </div>
     </section>
     
@@ -239,37 +291,3 @@
     <section>
         <h2>Utbildning</h2>
         <table>
-            <tr><td class="period">2024–2026</td><td><strong>Calle Flygare Teaterskola</strong></td></tr>
-            <tr><td class="period">2025</td><td><strong>Cinemantrix</strong> – Grundkurs i skådespeleri</td></tr>
-            <tr><td class="period">2020</td><td><strong>Natalie Portman Masterclass</strong> – Videokurs i skådespeleri</td></tr>
-            <tr><td class="period">2020</td><td><strong>Kulturama</strong> – Skådespel för film & tv</td></tr>
-        </table>
-    </section>
-
-    <!-- FÄRDIGHETER -->
-    <section>
-        <h2>Särskilda färdigheter</h2>
-        <div class="stats-grid">
-            <div class="stat-card"><div class="stat-label">Fysiskt & Stunt</div><div class="stat-value">Kampsport, Parkour, Stunt, Improvisation, Kameravana</div></div>
-            <div class="stat-card"><div class="stat-label">Musik & Studio</div><div class="stat-value">Sång, Elgitarr, Gitarr, Elbas</div></div>
-            <div class="stat-card"><div class="stat-label">Produktion</div><div class="stat-value">Filmregissör, Filmproducent, Fotograf, Författare</div></div>
-        </div>
-    </section>
-
-    <!-- KONTAKT -->
-    <section>
-        <h2>Kontakt</h2>
-        <div class="stats-grid" style="grid-template-columns: 1fr;">
-            <div class="stat-card" style="text-align: center;">
-                <div class="stat-label">Direktkontakt</div>
-                <p style="margin: 10px 0; font-size: 18px;"><strong>E-post:</strong> oskarbrandell@hotmail.se</p>
-                <p style="margin: 10px 0; font-size: 18px;"><strong>Telefon:</strong> (+46) 76 006 73 13</p>
-                <p style="margin: 20px 0 0 0; font-size: 16px;"><a href="https://www.imdb.com/name/nm11712438/" target="_blank">Läs mitt CV på Internet Movie Database &rarr;</a></p>
-            </div>
-        </div>
-    </section>
-
-</div>
-
-</body>
-</html>
