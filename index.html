@@ -80,17 +80,19 @@
             background: rgba(0, 0, 0, 0.6);
             color: #fff;
             border: none;
-            width: 40px;
-            height: 40px;
+            width: 44px; /* Lite större klickyta för fingrar enligt Apples riktlinjer */
+            height: 44px;
             border-radius: 50%;
-            font-size: 18px;
+            font-size: 20px;
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
             transition: background 0.2s;
             backdrop-filter: blur(5px);
-            z-index: 10;
+            -webkit-backdrop-filter: blur(5px); /* Fix för Safari på iPhone */
+            z-index: 9999; /* Tvingar pilarna att ligga överst */
+            pointer-events: auto; /* Gör pilarna klickbara på pekskärmar */
         }
          .slider-btn:hover {
             background: rgba(255, 255, 255, 0.3);
@@ -215,12 +217,12 @@
 
         <!-- BILD-KARUSELL -->
         <div class="slider-container">
-            <button class="slider-btn prev" onclick="moveSlide(-1)">❮</button>
-            <div class="slider-wrapper" id="sliderWrapper">
-                <img src="IMG_6022.jpeg" alt="Oskar Brandell - Porträtt 1">
-                <img src="Brandell.Headshot.jpeg" alt="Oskar Brandell - Porträtt 2">
+            <button class="slider-btn prev" onclick="changeSlide(-1)">❮</button>
+            <div class="slider-wrapper">
+                <img src="IMG_6022.jpeg" alt="Oskar Brandell - Porträtt 1" class="slide-img active">
+                <img src="Brandell.Headshot.jpeg" alt="Oskar Brandell - Porträtt 2" class="slide-img">
             </div>
-            <button class="slider-btn next" onclick="moveSlide(1)">❯</button>
+            <button class="slider-btn next" onclick="changeSlide(1)">❯</button>
         </div>
     </header>
     
