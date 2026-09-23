@@ -331,6 +331,17 @@
     </section>
 
 </div>
-
+<script>
+        function changeSlide(direction) {
+            const wrapper = document.querySelector('.slider-wrapper');
+            const slideWidth = wrapper.clientWidth;
+            const scrollAmount = direction * slideWidth;
+            
+            wrapper.scrollBy({
+                left: scrollAmount,
+                behavior: 'smooth'
+            });
+        }
+    </script>
 </body>
 </html>
