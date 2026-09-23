@@ -332,16 +332,47 @@
 
 </div>
 <script>
-        function changeSlide(direction) {
-            const wrapper = document.querySelector('.slider-wrapper');
-            const slideWidth = wrapper.clientWidth;
-            const scrollAmount = direction * slideWidth;
-            
-            wrapper.scrollBy({
-                left: scrollAmount,
-                behavior: 'smooth'
-            });
+    const wrapper = document.querySelector('.slider-wrapper');
+    const prevBtn = document.querySelector('.slider-btn.prev');
+    const nextBtn = document.querySelector('.slider-btn.next');
+
+    // 1. Funktion för att klicka på pilarna
+    function changeSlide(direction) {
+        const slideWidth = wrapper.clientWidth;
+        wrapper.scrollBy({
+            left: direction * slideWidth,
+            behavior: 'smooth'
+        });
+    }
+
+    // 2. Funktion som känner av scroll och gömmer/visar pilarna
+    function updateArrows() {
+        const scrollLeft = wrapper.scrollLeft;
+        const maxScroll = wrapper.scrollWidth - wrapper.clientWidth;
+
+        // Göm vänsterpil om vi är längst till vänster (marginal på 5px för säkerhet)
+        if (scrollLeft <= 5) {
+            prevBtn.style.display = 'none';
+        } else {
+            prevBtn.style.display = 'flex';
         }
-    </script>
+
+        // Göm högerpil om vi är längst till höger
+        if (scrollLeft >= maxScroll - 5) {
+            nextBtn.style.display = 'none';
+        } else {
+            nextBtn.style.display = 'flex';
+        }
+    }
+
+    // Lyssna på scroll-händelser (fungerar både vid klick och swipe)
+    wrapper.addEventListener('scroll', updateArrows);
+    
+    // Kör funktionen direkt vid start så att vänsterpilen är gömd från början
+    updateArrows();
+
+    // Uppdatera om användaren ändrar storlek på skärmen
+    window.addEventListener('resize', updateArrows);
+</script>
 </body>
 </html>
